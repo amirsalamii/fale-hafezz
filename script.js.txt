@@ -1,0 +1,28 @@
+document.getElementById("generateButton").addEventListener("click", function() {
+    // آرایه‌ای از شعرها و تفسیرها
+    const fortunes = [
+        {
+            fortune: "بشنو از نی چون حکایت می‌کند",
+            interpretation: "این بیت نشان‌دهنده‌ی داستان‌ها و تجربیات زندگی است. به این معنی که باید از گذشته‌ها یاد بگیریم."
+        },
+        {
+            fortune: "دل به دل راه دارد",
+            interpretation: "این بیت به معنای ارتباطات معنوی و احساسی است. شاید وقت آن رسیده که ارتباطات قلبی‌ات را تقویت کنی."
+        },
+        {
+            fortune: "هر کسی به چیزی دل بسته است",
+            interpretation: "این بیت به اهمیت نیت و هدف در زندگی اشاره دارد. باید بدانیم که دل ما به چه چیزی تعلق دارد."
+        },
+        // می‌توانید اشعار و تفسیرهای بیشتری اضافه کنید
+    ];
+
+    // انتخاب یک شعر تصادفی
+    const randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
+
+    // نمایش فال و تفسیر
+    document.getElementById("fortuneText").textContent = randomFortune.fortune;
+    document.getElementById("interpretationText").textContent = randomFortune.interpretation;
+
+    // نمایش پیام فال
+    document.getElementById("fortuneMessage").classList.remove("hidden");
+});
